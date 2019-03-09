@@ -1,3 +1,6 @@
+import { OwnedPostsComponent } from './owned-posts/owned-posts.component';
+import { PreferredPostsComponent } from './preferred-posts/preferred-posts.component';
+import { LikedPostsComponent } from './liked-posts/liked-posts.component';
 import { RegisterComponent } from './register/register.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { NgModule } from '@angular/core';
@@ -21,7 +24,20 @@ const routes: Routes = [
   {
     path: 'createPost',
     component: CreatePostComponent
+  },
+  {
+    path: 'liked',
+    component: LikedPostsComponent
+  },
+  {
+    path: 'preferred',
+    component: PreferredPostsComponent
+  },
+  {
+    path: 'owned',
+    component: OwnedPostsComponent
   }
+
 ];
 
 @NgModule({

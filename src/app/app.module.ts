@@ -36,6 +36,8 @@ import { PostService } from './services/post.service';
 import { PostCardComponent } from './shared/post-card/post-card.component';
 import { CommentComponent } from './shared/comment/comment.component';
 import { LikedPostsComponent } from './liked-posts/liked-posts.component';
+import { PreferredPostsComponent } from './preferred-posts/preferred-posts.component';
+import { OwnedPostsComponent } from './owned-posts/owned-posts.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +51,8 @@ import { LikedPostsComponent } from './liked-posts/liked-posts.component';
     PostCardComponent,
     CommentComponent,
     LikedPostsComponent,
+    PreferredPostsComponent,
+    OwnedPostsComponent,
   ],
   imports: [
     AppRoutingModule,
