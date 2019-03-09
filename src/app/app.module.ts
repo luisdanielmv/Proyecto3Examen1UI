@@ -1,3 +1,4 @@
+import { CommentService } from './services/comment.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -15,6 +16,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatChipsModule} from '@angular/material/chips';
 import {MatIconModule} from '@angular/material/icon';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import {MatDividerModule} from '@angular/material/divider';
+
 
 
 import {
@@ -32,6 +35,7 @@ import { TagService } from './services/tag.service';
 import { PostService } from './services/post.service';
 import { PostCardComponent } from './shared/post-card/post-card.component';
 import { CommentComponent } from './shared/comment/comment.component';
+import { LikedPostsComponent } from './liked-posts/liked-posts.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +48,7 @@ import { CommentComponent } from './shared/comment/comment.component';
     RegisterComponent,
     PostCardComponent,
     CommentComponent,
+    LikedPostsComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -54,13 +59,14 @@ import { CommentComponent } from './shared/comment/comment.component';
     MatButtonModule,
     MatCardModule,
     MatChipsModule,
+    MatDividerModule,
     MatFormFieldModule,
     MatIconModule,
     MatInputModule,
     MatToolbarModule,
     ReactiveFormsModule
   ],
-  providers: [UserService, TagService, PostService],
+  providers: [UserService, TagService, PostService, CommentService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
